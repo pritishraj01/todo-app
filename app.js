@@ -3,8 +3,8 @@ const completeBtn = document.querySelector(".complete");
 const nextBtn = document.querySelector(".next");
 const deleteBtn = document.querySelector(".delete");
 const list = document.querySelectorAll("li");
-const taskList= document.querySelector("#task-list");
-
+const taskList = document.querySelector("#task-list");
+const resetBtn = document.querySelector("#reset");
 
 
 completeBtn.addEventListener("click", () => {
@@ -61,9 +61,24 @@ nextBtn.addEventListener("click", () => {
     li.append(compBtn);
     li.append(delBtn);
     li.append(nextAgainBtn);
+    li.style.color= "white";
 
     // Append to list
     taskList.append(li);
 });
 
+resetBtn.addEventListener("click", () => {
+    const items = taskList.querySelectorAll("li");
+
+    items.forEach((li, i) => {
+        if (i !== 0) {
+            li.remove();
+        } else {
+            if (userInput !== "") {
+                userInput.value = "";
+                userInput.style.textDecoration = "none";
+            }
+        }
+    })
+});
 
