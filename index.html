@@ -5,19 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo app</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <p id="heading">ToDo list</p>
+        <div class="topic">
+            <p id="heading">To-Do List</p>
+        </div>
         <div class="list">
-            <ol>
-               <li><input type="text" placeholder="write what to do"></li>
-                <button>complete</button><button>delete</button>
+            <ol id="task-list">
+                <li>
+                    <input type="text" placeholder="write what to do" class="user-input">
+                    <button class="btn complete">Complete</button>
+                    <button class="btn delete">Delete</button>
+                    <button class="btn next">Next</button>
+                </li>
             </ol>
         </div>
-        <button>SAVE</button>
     </div>
+    <div class="outside-btn">
+        <button class="btn" id="save">SAVE</button>
+        <button class="btn" id="reset">RESET</button>
+    </div>
+    <script src="app.js"></script>
 </body>
 
 </html>

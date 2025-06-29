@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 1rem;
+    background-color: aquamarine;
+}
+
+.topic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgb(51, 235, 235);
+    height: 50vh;
+    width: 30vw;
+    padding: 30px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+
+
+.container #heading {
+    font-size: 3rem;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+.container .list ol {
+    font-size: 1.5rem;
+}
+
+.container .list ol .user-input {
+    width: 100%;
+    height: 3rem;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 1.5rem;
+    border: none;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 3px;
+}
+
+.container .list ol .complete {
+    margin-right: 1rem;
+}
+
+.container .list ol .delete{
+    margin-right: 1rem;
+} 
+
+.complete:hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.container .list ol li{
+    margin-bottom: 20px;
+}
+
+.next:hover{
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.btn {
+    font-size: 1rem;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 100;
+    font-style: normal;
+    padding: 5px;
+}
+
+#save {
+    width: 6rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+#save:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.outside-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }to{
+        opacity: 1;
+        transform: translateY();
+    }
+}
+
+body{
+    animation: fromTop 1s ease-out;
+}
